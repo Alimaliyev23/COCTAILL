@@ -1,18 +1,18 @@
-import { Outlet } from "react-router"
-import Header from "./Header"
-import Footer from "./Footer"
-import { Container } from "@mui/material"
+import { Outlet } from "react-router";
+import Header from "./Header";
+import Footer from "./Footer";
+import { Container, Box } from "@mui/material";
 
 function App() {
   return (
-    <>
+    <Box sx={{ display: "flex", flexDirection: "column", flexWrap:"wrap" , minHeight: "100vh" }}>
       <Header />
-      <Container component="main" sx={{my: 5}}>
+      <Container component="main" maxWidth="xl">
         <Outlet />
       </Container>
       <Footer />
-    </>
-  )
+    </Box>
+  );
 }
 
-export default App
+export default App;
